@@ -151,4 +151,8 @@ using System.Data;
 //bulunan yeni rakam tekrar string tipine çevrilecek
 
 Random rnd =new Random();
-int randomDegisken =rnd.Next();
+int randomDegisken =rnd.Next(97, 122);
+int randomDegisken1 =rnd.Next(97, 122);
+char char1 = Convert.ToChar(randomDegisken);
+char char2 = Convert.ToChar (randomDegisken1);
+Console.WriteLine("{0}{1}", char1, char2);
