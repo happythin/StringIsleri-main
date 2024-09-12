@@ -1,158 +1,127 @@
-﻿﻿// See https://aka.ms/new-console-template for more information
+﻿// See https://aka.ms/new-console-template for more information
 
-using System.Data;
-// Kitap önerisi : Sefer Algan - Her Yönüyle C#
-#region Convert Tip Dönüşümü
+// Karar mekanizmaları bir yazılımın en önemli bileşenidir.
+// Derleyiciye belli değerlere göre, belli kod bloklarını çalıştırmasını söylemek, karar yapılarını açıklar.
 
-// Bool tipinde bir değişkeni, int tipine çevirmek
-//bool boolDegisken = false;
-//int intDegisken = Convert.ToInt32(boolDegisken);
-//Console.WriteLine(intDegisken);
+// bir koşul 
+// koşul true ise, bu kod çalışssın
+// değilse bu kod bloğu çalışssın
 
-// bool tipinde bir değişkeni int tipine çevirebiliriz.
-// int tipine çevirilen true değeri : 1 
-// int tipine çevirilen false değeri : 0 olarak çevrilecektir.
-
-// int tipinde bir değişkeni bool tipine çevirebilir miyiz ?
-
-// int tipinde bir değişken bool tipine dönüştürülebilir.
-// int tipi, 0 değerini taşıyorsa, bool tipine dönüşten sonra false değerine dönüşür.
-// 0 harici herhangi bir değer taşıyorsa, bool tipine dönüştüren sonra true değeri taşır.
+// Kaç farklı koşul işlemi tipi var : 2
+// bunlar;
+// If - Else IF-Else
+// Switch Case
 
 
-//int intDegisken = -100;
-//bool boolDegisken = Convert.ToBoolean(intDegisken);
-//Console.WriteLine(boolDegisken);
+#region If Yöntemi
+// syntax
+/*
 
-// Char tipini, int tipine convert ile dönüştürelim
-//char charDegisken = 'Z';
-//int intDegisken = Convert.ToInt32(charDegisken);
-//Console.WriteLine(intDegisken);
-// char tipi int tipine dönüştürüldüğünde, her bir harfe karışık gelen bir rakama dönüşür. 
-
-// Örnek : büyük A ile küçük A arasındaki sayı, 32 dir, aynı şey, büyük Z ve küçük z arasındaki sayı farkıda 32 dir.
-
-// int tipini char tipine çevirmek 
-//int intDegisken  = 50;
-//char charDegisken = Convert.ToChar(intDegisken);
-//Console.WriteLine(charDegisken);
-
-// int tipi char tipine dönüştürüldüğünde, 0 ile 255 arasında farklı karakterler dönüşmektedir.
+// Koşul değişkeni, her zaman mantıksal operatörlerden gelen bir değer olmalıdır (True,False)
+// yani if her zaman true yada false değerine göre karar verir.
 
 
-// bir string ifadenin içerisindeki rakamları alıp, int tipine dönüştürme!!!!
-//string stringDegisken = "aaaa44433299sdsds";
-//string newString = stringDegisken.Substring(4, 8);
-//int intDegisken = Convert.ToInt32(newString);
-//Console.WriteLine(intDegisken);
+if(Koşul)
+{
+    // koşul true ise, bu kod bloğu çalışacaktır.
+    
+}
+
+// Bir örnek açıklayalım
+*/
+
+//bool isOk = false;
+// if parantezi, ya true false değer alır, yada true false değer üretecek bir mantıksal operatör işlemi alır.
+//Console.WriteLine("A");
+//if(isOk)
+//{
+//    Console.WriteLine("B");
+//}
+//Console.WriteLine("C");
+
+
+// Bool değişken yerine, mantıksal oparatör kullanalım
+/*Console.WriteLine("Bir değer giriniz");
+int intDegisken = int.Parse(Console.ReadLine());
+bool isOk = intDegisken > 5;
+if(isOk)
+{
+    // isOk değişkenin değeri true ise bu blok çalışır.
+    Console.WriteLine("Girilen değer 5 den büyük");
+}
+*/
+// İf içerisinde bir değişken değilde, mantıksal değer üretecek olan bir kod bloğu yazabiliriz.
+/*Console.WriteLine("Bir değer giriniz");
+int intDegisken = int.Parse(Console.ReadLine());
+if(intDegisken>5)
+{
+    // isOk değişkenin değeri true ise bu blok çalışır.
+    Console.WriteLine("Girilen değer 5 den büyük");
+}
+*/
 #endregion
 
-#region Parse
 
-// Convert tip dönüşümü tekrar bir hatırlayalım
+// Bir örnek daha
+/*Console.WriteLine("Lütfen bir sayı giriniz");
+int intDegisken = int.Parse(Console.ReadLine());
+bool isCift = intDegisken%2 == 0;
+if(isCift)
+{
+    Console.WriteLine("Girmiş olduğunuz sayı çift sayıdır.");
+}  
+if(isCift!=true){
+   Console.WriteLine("Girdiğiniz sayı tek sayıdır.");
+}
+*/
 
-// C#'da kullanılan build-in (önceden tanımlı) 15 adet tanımlı tipi, birbirine çevirmek için kullanılır.
+// if - else
+/* 
+Console.WriteLine("Bir sayi giriniz");
+int intDegisken = int.Parse(Console.ReadLine());
+if(intDegisken%2 == 0)
+{
+    // yukarıdaki koşul işlemi true ise bu blok çalığır
+    Console.WriteLine("Girmiş olduğunuz sayı çift sayı");
+}
+else{
+    // yukarıdaki koşul işlemi false bu blok çalışır
+    Console.WriteLine("Girmiş olduğunuz sayı tek sayı");
+}
+Console.WriteLine("Uygulama sonu");
+*/
+/* Console.WriteLine("Lütfen bir harf giriniz: ");
+char harf = char.Parse(Console.ReadLine());
+if (harf <97)
+{
+    Console.WriteLine("Girdiğiniz harf büyüktür.");
+}
+else {
+    Console.WriteLine("Girdiğiniz harf küçüktür. ");
+}
 
+/*
+Console.WriteLine("Girdiğiniz harf küçüktür. ");
+char intDegisken = char.Parse(Console.ReadLine());
+int intHarf = Convert.ToInt32(intDegisken);
+Console.WriteLine(intHarf);
+*/
 
-// tip dönüşümleri hangileriydi : 
+/*
+Console.WriteLine("Ürünün fiyatını giriniz");
+int fiyat = int.Parse(Console.ReadLine());
 
-// Convert 
-// Cast
-// Parse
-// ToString
-
-// Parse : Parse bir tip için özelleşmiş bir tip dönüşümüdür.
-// Parse, string tipindeki verileri, diğer tiplere çevirmek için kullanılır. Yani parse sadece string alır.
-// string değişken tipi c#da çok fazla kullanıldığı için, parse string tipine özel olarak üretilmiştir.
-// amacı, hızlı bir şekilde, string tipini farklı tiplere çevirmektir.
-// başka bir sebebide, kullanıcıdan alınan değerler string'dir. Bu yüzden de string'e özel bir dönüştürme mekanizması vardır.
-
-// Örnek ve Syntax
-
-// string tipini int tipine dönüştürelim
-//string metin = "10";
-//int intDegisken = int.Parse(metin);
-//Console.WriteLine(intDegisken);
-
-
-// string tipini char tipine dönüştürelim
-//string metin = "a";
-//char charDegisken = char.Parse(metin);
-//Console.WriteLine(charDegisken);
-
-
-// string değeri bool tipine çevirelim
-//string metin ="false";
-//bool boolDegisken = bool.Parse(metin);
-//Console.WriteLine(boolDegisken);
-
-
-// Kullanıcıdan iki farklı sayısal değer alıp, bu sayısal değerleri,
-// Ekrana toplama-çıkartma-çarpma ve bölme yapacak şekilde yazdırın, 
-//buradaki tip dönümlerinde, parse kullanın
-
-
-
-
-#endregion
-
-#region Random Konusu
-
-// Araya konu serpiştirelim
-// C# ile random bir sayı oluşturabilirsiniz
-// belirli bir aralık vererek yada vermeyerek, c#'in size bir sayı vermesini sağlayabilirsiniz
-
-// random bize, rakamsal tiplerin sınırları içerisinde random bir değer üretip verecektir.
-
-//Random rnd = new Random();
-//int intRandom = rnd.Next();
-//Console.WriteLine(intRandom);
-
-// next fonksiyonu içerisinde iki parametre girerseniz, bu iki değer araında random bir değer üretip size dönecektir.
-//Random rnd = new Random();
-//int randomInt=rnd.Next(1,5);
-//Console.WriteLine(randomInt);
+double kdv = fiyat*1.2;
+double indirim = fiyat*0.7;
 
 
-// double tipinde bir random oluşturabiliriz.
-//Random rnd =new Random();
-//double randomDouble = rnd.NextDouble();
-//Console.WriteLine(randomDouble);
-#endregion
-
-#region ToString
-
-// tip dönüşümlerinden 3. sırayı alan dönüşüm tipi, ToString'dir.
-// ToString tip dönüşümü, parse tip dönüşümünün tersi olarak çalışır.
-
-// yani parse,string tipinden diğer tiplere dönüşüm sağlarken
-// ToString'de, diğer tiplerden, string tipine dönüşüm sağlar.
-//ToString tip dönüşümü, dönüştürmek istediğimiz değişkenin sonuna ToString fonksiyonunu kullanarak uygulanır.
+if (fiyat>=100)
+{
+    Console.WriteLine("Ürünün fiyatı: "+kdv);
+}
+else {
+    Console.WriteLine("Ürünün fiyatı: "+indirim);
+}
+*/
 
 
-// Örnek : 
-//int intDegisken =10;
-//string stringDegisken = intDegisken.ToString();
-
-// Console.WriteLine içerisinde yazdığınız string tipi dışındaki tüm değişkenleri ekrana yazdırırken ToString basar, yani siz farketmezsenizde, WriteLine metodu arka tarafta toString çağırır.
-//Console.WriteLine(10);
-
-#endregion
-// cast, bu konuyu yarına bırakacam!!!
-
-
-// Parse metodu ile yapılacak örnekler
-// Örnek : Random çektirdiğiniz sayının tek sayımı çift sayımı olduğunu ekrana yazdırınız
-// tek sayı ise, true çift sayı ise false
-
-// Örnek : küçük harf olarak girilen bir char'i, int tipi kullanarak, büyük harfe çevirin
-// char tipi, int tipine dönüştürülecek, 
-//arka tarafta olan sayı bulunacak, sonrasında bulunan sayıya 32 çıkartılacak, 
-//bulunan yeni rakam tekrar string tipine çevrilecek
-
-Random rnd =new Random();
-int randomDegisken =rnd.Next(97, 122);
-int randomDegisken1 =rnd.Next(97, 122);
-char char1 = Convert.ToChar(randomDegisken);
-char char2 = Convert.ToChar (randomDegisken1);
-Console.WriteLine("{0}{1}", char1, char2);
