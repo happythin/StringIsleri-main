@@ -123,5 +123,39 @@ else {
     Console.WriteLine("Ürünün fiyatı: "+indirim);
 }
 */
+Console.WriteLine("Uygulama sonu");
+*/
+/* Console.WriteLine("Lütfen bir harf giriniz: ");
+char harf = char.Parse(Console.ReadLine());
+if (harf <97)
+{
+    Console.WriteLine("Girdiğiniz harf büyüktür.");
+}
+else {
+    Console.WriteLine("Girdiğiniz harf küçüktür. ");
+}
 
+/*
+Console.WriteLine("Girdiğiniz harf küçüktür. ");
+char intDegisken = char.Parse(Console.ReadLine());
+int intHarf = Convert.ToInt32(intDegisken);
+Console.WriteLine(intHarf);
+*/
+
+/*
+Console.WriteLine("Ürünün fiyatını giriniz");
+int fiyat = int.Parse(Console.ReadLine());
+
+double kdv = fiyat*1.2;
+double indirim = fiyat*0.7;
+
+
+if (fiyat>=100)
+{
+    Console.WriteLine("Ürünün fiyatı: "+kdv);
+}
+else {
+    Console.WriteLine("Ürünün fiyatı: "+indirim);
+}
+*/
 
