@@ -544,4 +544,95 @@ switch (gun)
     Console.WriteLine("Geçersiz");
     break;
 }
+//NOT HESAPLAMA
+/*
+Console.WriteLine("Lütfen vize notunuzu giriniz.");
+double vize= (double.Parse(Console.ReadLine()))*0.3;
+Console.WriteLine("Lütfen final notunuzu giriniz");
+int final= int.Parse(Console.ReadLine());
+double final1 = final*0.70;
+
+if (final<=49)
+{
+    Console.WriteLine("Final notunuz 50'nin altında olduğu için Bütünlemeye kaldınız.");
+}
+else if (vize+final1>= 50)
+{
+    Console.WriteLine("{0} ile dersten geçtiniz.",vize+final1);
+}
+else   
+{
+    Console.WriteLine("{0} ile dersten kaldınız. Bütünlemede başarılar",vize+final1);
+}
+*/
+// ÜRÜN FİYATINA GÖRE KARGO BEDELİ EKLEME
+/*
+Console.WriteLine("Satın almak istediğiniz ürünün fiyatını giriniz.");
+int fiyat = int.Parse(Console.ReadLine());
+if (fiyat>100) 
+{
+    Console.WriteLine("Ödenecek toplam tutar: {0}TL.",fiyat);
+
+}
+else
+{
+    Console.WriteLine("Ödenecek toplam tutar {0}TL.",fiyat+50);
+}
+*/
+//sayının pozitif negatif veya sıfır olduğunu belirtmek
+/* 
+Console.WriteLine("Lütfen herhangi bir sayı giriniz");
+string sayi=Console.ReadLine();
+if (sayi == "0")
+{
+    Console.WriteLine("Girdiğiniz Sayı 0.");
+}
+else if (sayi.StartsWith("-") )
+{
+    Console.WriteLine("Girdiğiniz sayı negatif");
+}
+else   
+{
+    Console.WriteLine("Girdiğiniz sayı pozitiftir.");
+}
+*/
+// DÖRT İŞLEM
+/*
+
+Console.WriteLine("Lütfen yapmak istediğiniz işlemi giriniz");
+char islem =char.Parse(Console.ReadLine());
+Console.WriteLine("Lütfen 1. Sayıyı giriniz");
+int sayi1=int.Parse(Console.ReadLine());
+Console.WriteLine("Lütfen 1. Sayıyı giriniz");
+int sayi2=int.Parse(Console.ReadLine());
+if (islem =='/')
+{
+    if (sayi2 == 0)
+    {
+        Console.WriteLine("Bölüm 0 olamaz");
+    }
+
+    else
+    {
+          Console.WriteLine(sayi1/sayi2);
+    }
+  
+}
+else if (islem =='*')
+{
+    Console.WriteLine(sayi1*sayi2);
+}
+else if (islem =='+')
+{
+    Console.WriteLine(sayi1+sayi2);
+}
+else if (islem =='-')
+{
+    Console.WriteLine(sayi1-sayi2);
+}
+else
+{
+    Console.WriteLine("Geçersiz işlem.");
+}
+*/
 
