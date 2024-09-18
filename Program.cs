@@ -817,3 +817,41 @@ else
     Console.WriteLine("Geçersiz işlem.");
 }
 */
+// 100 ADET RANDOM SAYI ÇEKİP BU SAYILARDAN 
+// KAÇ TANESİ ÇİFT SAYI KAÇ TANESİ TEK EKRANA YAZDIRAN UYGULAMA 
+/* 
+int tek=0;
+int cift=0;
+int sifir=0;
+for (int i=0;i<=1000;i++) 
+{
+ Random rnd= new Random();
+int sayi = rnd.Next(1,99999);
+if (sayi == 0)
+{
+    sifir++;
+}
+
+else if(sayi %2== 0)
+{
+    cift++;
+}
+else
+{
+    tek++;
+}
+}
+Console.WriteLine("{0} tane Çift Sayı mevcut",cift);
+Console.WriteLine("{0} tane Tek Sayı mevcut",tek);
+Console.WriteLine("{0} adet Sıfır seçildi",sifir);
+*/
+using System.IO.Compression;
+
+Random rnd= new Random();
+for (int i=0;i<=10;i++) 
+{
+
+int intKelime = (char)rnd.Next('A','Z');
+char karakter = Convert.ToChar(intKelime);
+Console.Write(karakter);
+}
