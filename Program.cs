@@ -845,9 +845,9 @@ Console.WriteLine("{0} tane Çift Sayı mevcut",cift);
 Console.WriteLine("{0} tane Tek Sayı mevcut",tek);
 Console.WriteLine("{0} adet Sıfır seçildi",sifir);
 */
-using System.IO.Compression;
 
-Random rnd= new Random();
+/*
+ Random rnd= new Random();
 for (int i=0;i<=10;i++) 
 {
 
@@ -855,3 +855,9 @@ int intKelime = (char)rnd.Next('A','Z');
 char karakter = Convert.ToChar(intKelime);
 Console.Write(karakter);
 }
+*/
+//örnek dik üçgen
+
+//girilen sayıların en büyüğü ve en küçüğünü ekrana yazdırma
+int sayi;
+for  (int i =0 i<10;i++)
