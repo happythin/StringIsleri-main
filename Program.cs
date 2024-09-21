@@ -1,4 +1,6 @@
-﻿
+﻿// See https://aka.ms/new-console-template for more information
+
+
 // Döngü :  Verilen şart sağlanmadığı sürece, belirli kod bloklarını 
 //şart sağlanana kadar çalıştıran yapılardır
 // Döngü Çesitleri :
@@ -324,9 +326,11 @@ for (int i = metin.Length;i>0;i--){
 Console.WriteLine(ters);
 */
 
+
+
+
 // Ekrana girilen küçük harf string metinin, baş harf ve son harf lerini büyük harf yapan
 // "uygulama yazınız
-
 
 
 Console.WriteLine("Bir değer giriniz");
