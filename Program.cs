@@ -1,863 +1,354 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿
+// Döngü :  Verilen şart sağlanmadığı sürece, belirli kod bloklarını 
+//şart sağlanana kadar çalıştıran yapılardır
+// Döngü Çesitleri :
+// For döngüsü
+// Forech Döngüsü
+// do while
 
-// Karar mekanizmaları bir yazılımın en önemli bileşenidir.
-// Derleyiciye belli değerlere göre, belli kod bloklarını çalıştırmasını söylemek, karar yapılarını açıklar.
+// koşul 
+// a satir
+// b satir
+// c satir
 
-// bir koşul 
-// koşul true ise, bu kod çalışssın
-// değilse bu kod bloğu çalışssın
+// For Döngüsü : 
 
-// Kaç farklı koşul işlemi tipi var : 2
-// bunlar;
-// If - Else IF-Else
-// Switch Case
+// Syntax
 
+// for(int i = 0;i<100;i++)
+//{
 
-#region If Yöntemi
-// syntax
-/*
+//}
 
-// Koşul değişkeni, her zaman mantıksal operatörlerden gelen bir değer olmalıdır (True,False)
-// yani if her zaman true yada false değerine göre karar verir.
-
-
-if(Koşul)
+// Örnek : 
+/*for(int i = 0; i <= 100;i++)
 {
-    // koşul true ise, bu kod bloğu çalışacaktır.
+    Console.WriteLine(i);
     
 }
-
-// Bir örnek açıklayalım
 */
 
-//bool isOk = false;
-// if parantezi, ya true false değer alır, yada true false değer üretecek bir mantıksal operatör işlemi alır.
-//Console.WriteLine("A");
-//if(isOk)
-//{
-//    Console.WriteLine("B");
-//}
-//Console.WriteLine("C");
+// Örnek 
+// 1 den 100 e kadar 5 er 5 er ekrana yazdıralım
 
 
-// Bool değişken yerine, mantıksal oparatör kullanalım
-/*Console.WriteLine("Bir değer giriniz");
-int intDegisken = int.Parse(Console.ReadLine());
-bool isOk = intDegisken > 5;
-if(isOk)
-{
-    // isOk değişkenin değeri true ise bu blok çalışır.
-    Console.WriteLine("Girilen değer 5 den büyük");
-}
-*/
-// İf içerisinde bir değişken değilde, mantıksal değer üretecek olan bir kod bloğu yazabiliriz.
-/*Console.WriteLine("Bir değer giriniz");
-int intDegisken = int.Parse(Console.ReadLine());
-if(intDegisken>5)
-{
-    // isOk değişkenin değeri true ise bu blok çalışır.
-    Console.WriteLine("Girilen değer 5 den büyük");
-}
-*/
-#endregion
+/*for (int i=0;i<1000;i+=5){
 
-
-// Bir örnek daha
-/*Console.WriteLine("Lütfen bir sayı giriniz");
-int intDegisken = int.Parse(Console.ReadLine());
-bool isCift = intDegisken%2 == 0;
-if(isCift)
-{
-    Console.WriteLine("Girmiş olduğunuz sayı çift sayıdır.");
-}  
-if(isCift!=true){
-   Console.WriteLine("Girdiğiniz sayı tek sayıdır.");
+Console.WriteLine(i);
 }
 */
 
-// if - else
-/*Console.WriteLine("Bir sayi giriniz");
-int intDegisken = int.Parse(Console.ReadLine());
-if(intDegisken%2 == 0)
-{
-    // yukarıdaki koşul işlemi true ise bu blok çalığır
-    Console.WriteLine("Girmiş olduğunuz sayı çift sayı");
-}
-else{
-    // yukarıdaki koşul işlemi false bu blok çalışır
-    Console.WriteLine("Girmiş olduğunuz sayı tek sayı");
-}
-Console.WriteLine("Uygulama sonu");
-
-
-// Örnek : ekrandan bir karakter alalım, bu karakter büyük harf ise, ekrana büyük harf, 
-// küçük harf ise, ekrana küçük harf yazdıran bir uygulama yapınız
-
-*/
-// Süre 10 dakikadır.
-/*
-
-// Ekrandan bir string karakter alıp, büyük yada küçük harf olduğunu ekrana yazdıran uygulama
-Console.WriteLine("Lütfen küçük yada büyük bir harf giriniz");
-char charKarakter = char.Parse(Console.ReadLine());
-int intDegisken = Convert.ToInt32(charKarakter);
-if(intDegisken>64 && intDegisken<91){
-    // true ise bu blok çalışır
-    Console.WriteLine("Girdiğiniz harf büyük harf");
-}
-else{
-    Console.WriteLine("Girdiğiniz harf küçük harf");
-}
-*/
-// Kullanıdan not bilgisini alınız.(Not 50 den düşük ise, kaldı, büyük ise geçti yazdırınız)
-/*Console.WriteLine("Lütfen aldığınız notu yazınız");
-int not = int.Parse(Console.ReadLine());
-if(not<50){
-    Console.WriteLine("Kaldın");
-}
-else{
-    System.Console.WriteLine("Geçtin");
-}
-
-*/
 // Örnek : 
-// Kullanıcıdan aldığınız username=wissen ve password=1010'a eşitse, 
-//ekrana giriş başarılı, değilse, giriş başarısız yazan uygulamayı yapınız
+// For döngüsünü tersten çevirebilir miyiz ?
+// 1000'den 0'a tersten döndürelim
 
-/*
-Console.WriteLine("Lütfen kullanıcı adını giriniz");
-string userName = Console.ReadLine();
-Console.WriteLine("Lütfen şifrenizi giriniz");
-string password = Console.ReadLine();
-if(userName=="wissen" && password=="1010"){
-    Console.WriteLine("Hoşgeldiniz");
+/*for (int i = 1000; i > 0 ; i--)
+{
+    Console.WriteLine(i);
 }
-else{
-    Console.WriteLine("Kullanıcı yada şifre hatalı");
+*/
+
+// i değeri her zaman 0 dan başlamak zorunda değildir.
+
+// 10 dan yüze kadar sayıları ekrana yazdıralım
+
+/*for(int i=10;i<100;i++){
+
 }
 */
 
 
-// İf ve Else koşullarında, eğer bu blokların içerisinde tek bir satır kod yazacaksak, parantez yapmamıza gerek yoktur.
-// yukarıdaki örneği bu şekilde yazalım
+// Hiç bir koşul ve artış verilmeden döngü tanımlanabilir
+/*int a = 10;
+for(;;){
 
-/*Console.WriteLine("Lütfen kullanıcı adını giriniz");
-string userName = Console.ReadLine();
-Console.WriteLine("Lütfen şifrenizi giriniz");
-string password = Console.ReadLine();
-if(userName=="wissen" && password=="1010")
-    Console.WriteLine("Hoşgeldiniz");
-else
-    Console.WriteLine("Kullanıcı yada şifre hatalı");
+    // bu döngüye sonsuz döngü denir.
+    a++;
+    Console.WriteLine(a);
+}
 */
 
-// Ekrandan bir ürün fiyatı değeri alalım, ürün fiyatı değeri 100'den büyük ise %20 kdv payı ekleyip ekranda gösterelim
-// ürün fiyatı 100'den küçük ise, %30 indirim yapıp ekrana yazdıralım
-/*
-Console.WriteLine("Lütfen ürün fiyatını giriniz");
-double productPrice = double.Parse(Console.ReadLine());
+// Farklı bir yazım şekli
 
-if(productPrice<100){
-    double newPrice = productPrice-(productPrice*0.3);
-    Console.WriteLine("ürünün yeni fiyatı : {0}",newPrice);
+
+/*int a;
+int b =0;
+for(a=20;a<100;){
+    //a++;
+    Console.WriteLine(a);
+
+    b++;
+    // sonsuz adet 20 olur
+    Console.WriteLine(b);
 }
-else{
+*/
+// dönen bir döngüyü durdurma!!
+// iki yöntem var
+// 1- kaçış keywordleri ile(break-contiune,return)
+// 2- mevcut koşuşu bozarak döngüden dışarı çıkılabilir
+/*for(int i=10;i<100;i++){
+    // bu göndü 10'dan 100'a kadar dönecek
 
-    double newPrice = (productPrice*1.2);
-    Console.WriteLine("ürünün yeni fiyatı : {0}",newPrice);
+    // döngü 50ye ulaştığında sonlandıralım
+    Console.WriteLine(i);
+    if(i==50){
+        i=101;
+    }
+
+    // döngünün dönmesi, yukarıdaki koşulun sağlanmasına bağlıdır. 
+    //bu konuş bozulduğunda, yani true değer üretmediğinde döngü dönmeuye devam etmez:
+
 }*/
 
 
-// İç İçe İf
-// syntax
-/*
-if(koşul)
-{
-    if(koşul)
-    {
+// For içerisinde for olur mu ?
+
+// çarpım tablosu örneği üstünden gösterelim
+
+/*for(int i=1;i<=10;i++){
+// bir kere çalıştı
+    for(int j=1;j<=10;j++){
+        // 10 kere çalıştı
+        // buraya yazılan bir yazı ekrana kaç defa yazar.
+        //9 
+        //10 11
+        //100 2
+        // sürekli olarak tekrarlar mı 
+        // Cevap : 100 kere yazar 
+
+        Console.WriteLine("{0}x{1}={2}",i,j,i*j);
         
-    }
-    else
-    {
-    }
-}
-else
-{
-    if(koşul)
-    {
-    }
-    else
-    {
-    }
+    }// döngü değişkeni bellekten düşer
+    Console.WriteLine("--------------------");
 }
 */
 
 
-// Örnek :
-/*
-Console.WriteLine("Lütfen not giriniz");
-int not = int.Parse(Console.ReadLine());
-if(not<50)
+// Örnek : 
+// 1000 adet random sayı çekip, bu sayılardan kaç tanesi tek kaç tanesi çift sayı ekrana yazan uygulama
+
+/*int tekSayi=0;
+int ciftSayi =0;
+Random rnd = new Random();
+
+for(int i =0;i < 10000;i++)
 {
-
-    if(not<25){
-        Console.WriteLine("Sınıfta kaldın");
-
+    int randomSAyi = rnd.Next(0, 1000);
+    if(randomSAyi%2==0){
+        ciftSayi++;
     }
     else{
-        Console.WriteLine("Düşük seviyeli geçtin");
+        tekSayi++;
     }
 }
-else{
-    if(not<75){
-        Console.WriteLine("Orta seviyeli geçtin");
-    }
-    else{
-        Console.WriteLine("Çok iyi seviye ile geçtin");
-    }
+Console.WriteLine("{0} adet tek sayı",tekSayi);
+Console.WriteLine("{0} adet çift sayı",ciftSayi);
+*/
+// for döngüsü kullanılarak, ekrana 10 karakterli random bir kelime yazdırınız
+// Örnek : asjasdkdkd
+
+/*Random rnd = new Random();
+string randomString="";
+for(int i=0;i<=1000;i++){
+
+   char random = (char)rnd.Next('A','Z');
+   //randomString=randomString+random.ToString();
+
+   // oluşturulan değeri bir değişken üzerine alalım.!!
+   randomString+=random.ToString();
+   Console.Write(random);
+
 }
 */
 
+// Örnek : Ekrandan x adet sayı alalım, girilen bu sayıların en küçüğünü ve en büyüğünü ekrana yazdıralım
+// Örnek
 
-// IF - Else If- Else Blokları(Çoklu case kontrolü)
+/*int enBuyuk = 0;
+int enKucuk = 999;
+Console.WriteLine("Merhaba en küçük ve en büyük sayı bulma oyunu için sayı girişi yapmanızı istiyorum");
+for(int i = 0; i < 10;i++){
 
-// If ve Else kullanımında, derleyici iki tek bir kontrol yapıyordu.
-// If bloğunda kapılan kontrol ıf bloğu şartına uyuyorsa, if çalışıyordu,
-// uymuyorsa, else çalışıyordu.
 
-// Peki, eğer birden fazla koşum varsa ve ben bu koşulları, her birini if gibi değerlendirmek istiyorsam
+    Console.WriteLine("{0}. sayıyı giriniz",i+1);
+    int girilenSayi =int.Parse(Console.ReadLine());
+    if(girilenSayi<enKucuk){
+        enKucuk=girilenSayi;
+    }
+    if(girilenSayi>enBuyuk){
+        enBuyuk=girilenSayi;
+    }
+}
+
+*/
+/*
+enbuyuk = 0;
+enkucuk = 0;
+
+ekrandan değer aldın.
+4 girildi
+
+4 değeri 999 değerinden küçük mü 
+7 değeri 4 değerinden küçük mü ?
+
+
+1 değeri 4 değerinden küçük mü ?
+
+1 değeri 0 değerinden küçük mü ?
+
+
+
+Console.WriteLine("Girilen en büyük sayı : {0}",enBuyuk);
+Console.WriteLine("Girilen en küçük sayı : {0}",enKucuk);
+
+*/
+/*
+iç içe for döngüsü kullanarak aşağıdaki dik üçgeni çizdiriniz
+x
+xx
+xxx
+xxxx
+xxxxx
+xxxxxx
+xxxxxxx
+xxxxxxxx
+
+*/
+/*
+for(int i=0;i<10;i++){
+
+    for(int j=0;j<i;j++){
+
+        Console.Write("x");
+    }
+    Console.WriteLine("");
+}
 
 /*
-if(Koşul)
-{
-}
-else if(koşul)
-{
-}
-else if(koşul)
-{
-}
-else
-{
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
+***********
+*/
 
+
+// Random 1 ile 100 arasında bir sayı tutalım
+// For döngüsü kulnarak, ekrandan sayı girişi alalım
+// kullanıcının girdiği değer, random tutulan değerden küçük ise, yukarı, büyük ise aşağı
+// yazdırarak kullanıcıyı yönlendirelim
+// kullanıcıya 10 hak verelim, 10 hakta doğru sayıyı tahmin edemezse, ekrana kaybettiniz
+// yazalım, eğer doğru bulursa, tebrikler kazandınız diyelim
+
+
+// döngüyü sonlandırma yöntemi
+/*for(int i = 0; i < 10;i++){
+
+    Console.WriteLine(i);
+    if(i==5){
+        i=10;
+    }
+}
+*/
+/*Console.WriteLine("1-100 arasında bir değer tuttum, bu değeri tahmin et");
+Random rnd = new Random();  
+int randomSayi =rnd.Next(1,100);
+bool kazandimi = false;
+for (int i = 0;i<10;i++){
+
+    Console.WriteLine("{0}. tahminini gir",i+1);
+    int girilenSayi=int.Parse(Console.ReadLine());
+    if(girilenSayi>randomSayi){
+        Console.WriteLine("Aşağı");
+    }
+    if(girilenSayi<randomSayi){
+        Console.WriteLine("Yukarı");
+    }
+
+    if(girilenSayi==randomSayi){
+        kazandimi=true;
+        Console.WriteLine("Tebrikler Kazandınız");
+        // döngüyü sonlandırıyorum
+        i=10; // döngü koşulunu bozuyorum artık döngü dönmeyecek
+    }
+}
+if(kazandimi!=true){
+    // kazanılmadıysa, kaybettir yazdır
+  Console.WriteLine("Kaybettiniz");
 }
 */
 
-// if -else if-else konusunda bir örnek
+// Örnek : 
+// Öğrenciden 10 adet not alıp, bu notların ortalamasını bulan program yazınız.
+/*int toplamSayisi = 10;
+int toplamNot = 0;
+for (int i = 0;i<toplamSayisi;i++){
+    Console.WriteLine("{0}. notu giriniz",i+1);
+    int not = int.Parse(Console.ReadLine());
+    toplamNot+=not;
 
-//Console.WriteLine("Not giriniz");
-//int not = int.Parse(Console.ReadLine());
-
-// not 0-24 arasındaysa, 1
-// not 25-44 arasındaysa 2
-// not 45-60 arasındaysa 3
-// not 59-84 arasındaysa 4
-// not 85 ve 100 arasındaysa 5
-
-/*
-if(not>0 && not<24){
-    Console.WriteLine("1 aldın");
 }
-else if(not>=25 && not<=44){
-    Console.WriteLine("2 aldın");
-}
-else if(not>45 && not<=60){
-    Console.WriteLine("3 aldın ");
-}
-else if (not>60 && not<84){
-    Console.WriteLine("4 aldın");
-}
-else if(not>85 && not<100){
-    Console.WriteLine("5 aldın");
-}
-else{
-    Console.WriteLine("Lütfen geçerli bir not giriniz");
-}
-*/
-// Bir basit hesap makinası yapalım
-// Ekradan iki adet sayı alıp, birde işlem tipi alıp (+,-,/,*) işlem tipine hesap yapan
-// kod bloğunu yazalım
-// burada ek bir kontrol daha yapalım
-// eğer aldığınız bölen sıfır ise, uyarı mesajı verelim/ bölen sıfır olamaz
-
-/*Console.WriteLine("Hesap makinasına hoşgeldiniz");
-Console.WriteLine("1 sayıyı giriniz");
-     int birinciSayi = int.Parse(Console.ReadLine());
-Console.WriteLine("2. sayıyı giriniz");
-int ikinciSayi = int.Parse(Console.ReadLine());
-Console.WriteLine("İşlem tipini giriniz(+,-,/,*)");
-string islemTipi =Console.ReadLine();
-*/
-/* 1. case
-if(islemTipi=="/" && ikinciSayi!=0){
-    // programı devam ettir
-}
-else{
-    // bölen sıfır olamaz
-}
-*/
-// 2. case
-/*if(islemTipi=="+"){
-    Console.WriteLine(birinciSayi+ikinciSayi);
-}
-else if(islemTipi=="-"){
-    Console.WriteLine(birinciSayi-ikinciSayi);
-}
-else if(islemTipi=="*"){
-    Console.WriteLine(birinciSayi*ikinciSayi);   
-}
-else if(islemTipi=="/"){
-    if(ikinciSayi!=0){
-        Console.WriteLine(birinciSayi/ikinciSayi);
-    }
-    else{
-        // yukarıda 0 değilse, kontrolü var, değer 0'ı ise burası çalışacak
-        Console.WriteLine("Bölen sıfır olamaz");
-    }
-}
-// if veya else if'ler else olmadan çalışabilir.
+Console.WriteLine("Not Ortalamanız : {0}",toplamNot/toplamSayisi);
 */
 
-// Üçgenin alanı ve çevresi ve dairenin alanı ve çevresi hesaplama aracı yapacağız.
+// Bölüm sonu canavarı örnek 
+// Ekrandan almış olduğunuz bir yazıyı, döngü kullanarak ekrana ters yazdırınız
 
-// Uygulama çalıştığında, öncelikle programın yapabileceği özellikler ekrana çıksın
-// Örnek : Hesaplama için öncelikle şeklin adını sorsun
-// değer olarak üçgen yada daire giriniz
+// Kahve
+// evhak
 
-// bu değeri girdikten sonra, alan yada çevre hesabı yapmak istediğinizi sorsun
-// değer olarak alan yada çevre girin
-// daha sonra bu hesaplamalar için gerekli olan parametreleri kullanıcıdan istesin
 
-// daha sonra hesaplama yapıp ekrana sonucu göstersin
+/*Console.WriteLine("Bir metin giriniz");
+string metin = Console.ReadLine();
 
-/*Console.WriteLine("Hesaplama aracına hoşgeldin");
-Console.WriteLine("Hesaplama aracımız üçgen ve daire için çalışmaktadır");
-Console.WriteLine("Lütfen ücgen yada daire yazınız");
+// kahve
+// 5
+// 4
+// 3
 
-string sekil = Console.ReadLine();
-if (sekil.ToLower() == "ucgen")
-{
-    Console.WriteLine("Alan hesaplama Alan, Çevre hesaplamak için çevre yazınız");
-    string hesapText = Console.ReadLine();
-    if (hesapText.ToLower() == "alan")
-    {
 
-        // taban* yukseklik/2
-        Console.WriteLine("Taban değerini giriniz");
-        int taban = int.Parse(Console.ReadLine());
-        Console.WriteLine("Yükseklik değeri giriniz");
-        int yukseklik = int.Parse(Console.ReadLine());
-        // hesaplama
-        decimal result = taban * yukseklik / 2;
-        Console.WriteLine("Taban değeri {0} yükseklik değeri {1} olan üçgenin alanı : {2}", taban, yukseklik, result);
-    }
-    else if (hesapText.ToLower() == "cevre")
-    {
-        Console.WriteLine("1. kenar uzunluğu");
-        int birinciKenar = int.Parse(Console.ReadLine());
-        Console.WriteLine("2. kenar");
-        int ikinciKenar = int.Parse(Console.ReadLine());
-        Console.WriteLine("3. kenar");
-        int ucuncuKenar = int.Parse(Console.ReadLine());
-        int result = birinciKenar + ikinciKenar + ucuncuKenar;
-        Console.WriteLine("Üçgenin çevre uzunluğu : {0}", result);
-    }
-    else
-    {
-        Console.WriteLine("İşlem tipi geçersizdir");
-    }
+// bu örneği inceleyin, yarın bu konu hakkında konuşacağız.
+// yarın başka örneklerden devam!!
+
+/*string ters ="";
+for (int i = metin.Length;i>0;i--){
+
+   ters+=metin.Substring(i-1,1);
 }
-else if (sekil.ToLower() == "daire")
-{
-
-    Console.WriteLine("Alan hesaplamak için Alan, Çevre hesaplamak için Cevre yazınız");
-    string hesapText = Console.ReadLine();
-    if (hesapText.ToLower() == "alan")
-    {
-
-        Console.WriteLine("Alan hesabı için, yarı çap değerini giriniz");
-        int yariCap = int.Parse(Console.ReadLine());
-        Console.WriteLine("Yarı çapı : {0} olan dairenin alanı : {1}", yariCap, Math.PI * yariCap * yariCap);
-    }
-    else if (hesapText.ToLower() == "cevre")
-    {
-
-        Console.WriteLine("Çevre hesabı için yarı çap değerini giriniz");
-        int yariCap = int.Parse(Console.ReadLine());
-        Console.WriteLine("Yarı Çapı {0} olan dairenin çevresi {1}", yariCap, Math.PI * yariCap * 2);
-    }
-    else
-    {
-        Console.WriteLine("Geçersiz işlem tipi");
-    }
-
-}
-else
-{
-    Console.WriteLine("Geçersiz şekil");
-}*/
-
-
-// if yerin geçen ancak if yazmak istemediğimiz noktada, bazen hızlıca bir değeri kontrol edip ve bir sonuö ettiğimiz bir operatör
-// Ternary Operatörü
-
-using System.Data;
-
-bool isOk = true;
-
-//if(isOk)){
- // console.writeline(doğru)
-//}
-//else{
-//    // console.Writeline(yanlış)
-//}
-
-
-//string degisken = isOk?"Doğru":"Yanlış";
-
-//string metin = "Ok";
-//string result =metin=="Ok"?"Sonuç Ok":"sonuç ok değil";
-
-/*Console.WriteLine("Sayi 1");
-int sayi1 = int.Parse(Console.ReadLine());
-Console.WriteLine("Sayi 1");
-int sayi2=int.Parse(Console.ReadLine());
-Console.WriteLine("Seçim giriniz");
-char secim = char.Parse(Console.ReadLine());
+Console.WriteLine(ters);
 */
 
-// ternary operatörü mantıksal değere göre çalışır
-// eğer mantıksal operatör true değeri verirse, ? işareti ifadesinden sonraki blok çalışır
-// eğer mantıksal operatör false değeri verirse, : işaretinden sonraki blok çalışır.
-
-//int result = secim=='+'?sayi1+sayi2:0;
-//Console.WriteLine(result);
-
-// Ternary operatörü : Hızlı bir şekilde değeri birşeyler ile karşılaştırıp karar vermek için kullanılır.
-// genelde tek satır if yazmak yerine tercih edilir.
-// okunabilirliği düşüktür.
+// Ekrana girilen küçük harf string metinin, baş harf ve son harf lerini büyük harf yapan
+// "uygulama yazınız
 
 
 
-#region Örnek
-// ekrandan girmiş olduğunuz metin 10 karakterden fazla ise, ekrana çok uzun
-// 10 karakterden kısa ise, çok kısa yazdırınız
-
-//Console.WriteLine("Bir metin giriniz");
-//string metin = Console.ReadLine();
-//string result = metin.Length>=10?"karakter 10 dan büyük":"karakter 10'dan küçük";
-//Console.WriteLine(result);
-
-#endregion
-
-
-#region Örnek
-// Ekrandan almış olduğunuz karakter, A ile başlalıyorsa, karakter a iel başlıyor, başlamıyorsa
-// karakter a ile başlamıyor yazdırınız
 Console.WriteLine("Bir değer giriniz");
 string deger = Console.ReadLine();
-string result =deger.ToLower().StartsWith("a")?"a ile başlıyor":"a ile başlamıyor";
-Console.WriteLine(result);
-#endregion
+string ilkKarakter ="";
+string sonKarakter="";
+for (int i = 0;i<deger.Length;i++){
 
-
-
-
-// Switch Case yapısı
-// Örnek ile bakalım
-
-/* Console.WriteLine("1. sayıyı giriniz");
-int sayi1 = int.Parse(Console.ReadLine());  
-Console.WriteLine("2. sayıyı giriniz");
-int sayi2 = int.Parse(Console.ReadLine());
-Console.WriteLine("İşlem tipini giriniz");
-char tip = char.Parse(Console.ReadLine());
-switch (tip)
-{
-    case '+':
-    Console.WriteLine(sayi1+sayi2);
-    break;
-    case '-':
-    Console.WriteLine(sayi1-sayi2);
-    break;
-    case '*':
-    Console.WriteLine(sayi1*sayi2);
-    break;
-    case '/':
-
-    // bölen sıfır olamaz kontrolü
-    #region İf ile yapmak
-    if(sayi2!=0)
-    { 
-       Console.WriteLine(sayi1/sayi2);
+    string tekKarakter= deger.Substring(i,1);
+    if(i==0){
+        // ilk karakteri yakalarız
+        ilkKarakter=tekKarakter.ToUpper();
     }
-    else{
-
-        Console.WriteLine("Bölen sıfır olamaz");
+    if(i==deger.Length-1){
+        sonKarakter=tekKarakter.ToUpper();
     }
+}
+// baş harfi silelim
+string newString = deger.Remove(0,1);
+string newStringNew=newString.Remove(newString.Length-1,1);
 
-    
-    #endregion
-    #region Switch Case ile yapmak
-    switch (sayi2)
-    {
-        case 0:
-        Console.WriteLine("Bölen sıfır olamaz");
-        break;
-        default:
-        Console.WriteLine(sayi1/sayi2);
-        break;
+Console.WriteLine(ilkKarakter+newStringNew+sonKarakter);
 
-    }
-    #endregion
-    break;
-    default:
-    Console.WriteLine("girdiğin işlem tipi hatalı");
-    // yukarıdaki hiç bir case uymaz ise, default bloğu çalışır
-    // default bloğu olmak zorunda değil
-    break;
-}
-*/
-
-
-// ekrandan bir gün alınız, bu günün hafta sonu yada h içi olduğunu ekrana yazdırınız
-// Örnek : Pazartesi,Salı,Cumartesi
-
-
-// switch case yapısı aşağıdaki şekilde de kullanılabilir.
-Console.WriteLine("Bir gün adı giriniz");
-string gun =Console.ReadLine();
-switch (gun)
-{
-    case "Pazartesi":
-    case "Salı":
-    case "Çarşamba":
-    case "Perşembe":
-    case "Cuma":
-    Console.WriteLine("H içi");
-    break;
-    case "Cumartesi":
-    case "Pazar":
-    Console.WriteLine("H.Sonu");
-    break;
-    default:
-    Console.WriteLine("Geçersiz");
-    break;
-}
-//NOT HESAPLAMA
-/*
-Console.WriteLine("Lütfen vize notunuzu giriniz.");
-double vize= (double.Parse(Console.ReadLine()))*0.3;
-Console.WriteLine("Lütfen final notunuzu giriniz");
-int final= int.Parse(Console.ReadLine());
-double final1 = final*0.70;
-
-if (final<=49)
-{
-    Console.WriteLine("Final notunuz 50'nin altında olduğu için Bütünlemeye kaldınız.");
-}
-else if (vize+final1>= 50)
-{
-    Console.WriteLine("{0} ile dersten geçtiniz.",vize+final1);
-}
-else   
-{
-    Console.WriteLine("{0} ile dersten kaldınız. Bütünlemede başarılar",vize+final1);
-}
-*/
-// ÜRÜN FİYATINA GÖRE KARGO BEDELİ EKLEME
-/*
-Console.WriteLine("Satın almak istediğiniz ürünün fiyatını giriniz.");
-int fiyat = int.Parse(Console.ReadLine());
-if (fiyat>100) 
-{
-    Console.WriteLine("Ödenecek toplam tutar: {0}TL.",fiyat);
-
-}
-else
-{
-    Console.WriteLine("Ödenecek toplam tutar {0}TL.",fiyat+50);
-}
-*/
-//sayının pozitif negatif veya sıfır olduğunu belirtmek
-/* 
-Console.WriteLine("Lütfen herhangi bir sayı giriniz");
-string sayi=Console.ReadLine();
-if (sayi == "0")
-{
-    Console.WriteLine("Girdiğiniz Sayı 0.");
-}
-else if (sayi.StartsWith("-") )
-{
-    Console.WriteLine("Girdiğiniz sayı negatif");
-}
-else   
-{
-    Console.WriteLine("Girdiğiniz sayı pozitiftir.");
-}
-*/
-// DÖRT İŞLEM
-/*
-
-Console.WriteLine("Lütfen yapmak istediğiniz işlemi giriniz");
-char islem =char.Parse(Console.ReadLine());
-Console.WriteLine("Lütfen 1. Sayıyı giriniz");
-int sayi1=int.Parse(Console.ReadLine());
-Console.WriteLine("Lütfen 1. Sayıyı giriniz");
-int sayi2=int.Parse(Console.ReadLine());
-if (islem =='/')
-{
-    if (sayi2 == 0)
-    {
-        Console.WriteLine("Bölüm 0 olamaz");
-    }
-
-    else
-    {
-          Console.WriteLine(sayi1/sayi2);
-    }
-  
-}
-else if (islem =='*')
-{
-    Console.WriteLine(sayi1*sayi2);
-}
-else if (islem =='+')
-{
-    Console.WriteLine(sayi1+sayi2);
-}
-else if (islem =='-')
-{
-    Console.WriteLine(sayi1-sayi2);
-}
-else
-{
-    Console.WriteLine("Geçersiz işlem.");
-}
-*/
-
-//NOT HESAPLAMA
-/*
-Console.WriteLine("Lütfen vize notunuzu giriniz.");
-double vize= (double.Parse(Console.ReadLine()))*0.3;
-Console.WriteLine("Lütfen final notunuzu giriniz");
-int final= int.Parse(Console.ReadLine());
-double final1 = final*0.70;
-
-if (final<=49)
-{
-    Console.WriteLine("Final notunuz 50'nin altında olduğu için Bütünlemeye kaldınız.");
-}
-else if (vize+final1>= 50)
-{
-    Console.WriteLine("{0} ile dersten geçtiniz.",vize+final1);
-}
-else   
-{
-    Console.WriteLine("{0} ile dersten kaldınız. Bütünlemede başarılar",vize+final1);
-}
-*/
-// ÜRÜN FİYATINA GÖRE KARGO BEDELİ EKLEME
-/*
-Console.WriteLine("Satın almak istediğiniz ürünün fiyatını giriniz.");
-int fiyat = int.Parse(Console.ReadLine());
-if (fiyat>100) 
-{
-    Console.WriteLine("Ödenecek toplam tutar: {0}TL.",fiyat);
-
-}
-else
-{
-    Console.WriteLine("Ödenecek toplam tutar {0}TL.",fiyat+50);
-}
-*/
-//sayının pozitif negatif veya sıfır olduğunu belirtmek
-/* 
-Console.WriteLine("Lütfen herhangi bir sayı giriniz");
-string sayi=Console.ReadLine();
-if (sayi == "0")
-{
-    Console.WriteLine("Girdiğiniz Sayı 0.");
-}
-else if (sayi.StartsWith("-") )
-{
-    Console.WriteLine("Girdiğiniz sayı negatif");
-}
-else   
-{
-    Console.WriteLine("Girdiğiniz sayı pozitiftir.");
-}
-*/
-// DÖRT İŞLEM
-/*
-
-Console.WriteLine("Lütfen yapmak istediğiniz işlemi giriniz");
-char islem =char.Parse(Console.ReadLine());
-Console.WriteLine("Lütfen 1. Sayıyı giriniz");
-int sayi1=int.Parse(Console.ReadLine());
-Console.WriteLine("Lütfen 1. Sayıyı giriniz");
-int sayi2=int.Parse(Console.ReadLine());
-if (islem =='/')
-{
-    if (sayi2 == 0)
-    {
-        Console.WriteLine("Bölüm 0 olamaz");
-    }
-
-    else
-    {
-          Console.WriteLine(sayi1/sayi2);
-    }
-  
-}
-else if (islem =='*')
-{
-    Console.WriteLine(sayi1*sayi2);
-}
-else if (islem =='+')
-{
-    Console.WriteLine(sayi1+sayi2);
-}
-else if (islem =='-')
-{
-    Console.WriteLine(sayi1-sayi2);
-}
-else
-{
-    Console.WriteLine("Geçersiz işlem.");
-}
-*///NOT HESAPLAMA
-/*
-Console.WriteLine("Lütfen vize notunuzu giriniz.");
-double vize= (double.Parse(Console.ReadLine()))*0.3;
-Console.WriteLine("Lütfen final notunuzu giriniz");
-int final= int.Parse(Console.ReadLine());
-double final1 = final*0.70;
-
-if (final<=49)
-{
-    Console.WriteLine("Final notunuz 50'nin altında olduğu için Bütünlemeye kaldınız.");
-}
-else if (vize+final1>= 50)
-{
-    Console.WriteLine("{0} ile dersten geçtiniz.",vize+final1);
-}
-else   
-{
-    Console.WriteLine("{0} ile dersten kaldınız. Bütünlemede başarılar",vize+final1);
-}
-*/
-// ÜRÜN FİYATINA GÖRE KARGO BEDELİ EKLEME
-/*
-Console.WriteLine("Satın almak istediğiniz ürünün fiyatını giriniz.");
-int fiyat = int.Parse(Console.ReadLine());
-if (fiyat>100) 
-{
-    Console.WriteLine("Ödenecek toplam tutar: {0}TL.",fiyat);
-
-}
-else
-{
-    Console.WriteLine("Ödenecek toplam tutar {0}TL.",fiyat+50);
-}
-*/
-//sayının pozitif negatif veya sıfır olduğunu belirtmek
-/* 
-Console.WriteLine("Lütfen herhangi bir sayı giriniz");
-string sayi=Console.ReadLine();
-if (sayi == "0")
-{
-    Console.WriteLine("Girdiğiniz Sayı 0.");
-}
-else if (sayi.StartsWith("-") )
-{
-    Console.WriteLine("Girdiğiniz sayı negatif");
-}
-else   
-{
-    Console.WriteLine("Girdiğiniz sayı pozitiftir.");
-}
-*/
-// DÖRT İŞLEM
-/*
-
-Console.WriteLine("Lütfen yapmak istediğiniz işlemi giriniz");
-char islem =char.Parse(Console.ReadLine());
-Console.WriteLine("Lütfen 1. Sayıyı giriniz");
-int sayi1=int.Parse(Console.ReadLine());
-Console.WriteLine("Lütfen 1. Sayıyı giriniz");
-int sayi2=int.Parse(Console.ReadLine());
-if (islem =='/')
-{
-    if (sayi2 == 0)
-    {
-        Console.WriteLine("Bölüm 0 olamaz");
-    }
-
-    else
-    {
-          Console.WriteLine(sayi1/sayi2);
-    }
-  
-}
-else if (islem =='*')
-{
-    Console.WriteLine(sayi1*sayi2);
-}
-else if (islem =='+')
-{
-    Console.WriteLine(sayi1+sayi2);
-}
-else if (islem =='-')
-{
-    Console.WriteLine(sayi1-sayi2);
-}
-else
-{
-    Console.WriteLine("Geçersiz işlem.");
-}
-*/
-// 100 ADET RANDOM SAYI ÇEKİP BU SAYILARDAN 
-// KAÇ TANESİ ÇİFT SAYI KAÇ TANESİ TEK EKRANA YAZDIRAN UYGULAMA 
-/* 
-int tek=0;
-int cift=0;
-int sifir=0;
-for (int i=0;i<=1000;i++) 
-{
- Random rnd= new Random();
-int sayi = rnd.Next(1,99999);
-if (sayi == 0)
-{
-    sifir++;
-}
-
-else if(sayi %2== 0)
-{
-    cift++;
-}
-else
-{
-    tek++;
-}
-}
-Console.WriteLine("{0} tane Çift Sayı mevcut",cift);
-Console.WriteLine("{0} tane Tek Sayı mevcut",tek);
-Console.WriteLine("{0} adet Sıfır seçildi",sifir);
-*/
-
-/*
- Random rnd= new Random();
-for (int i=0;i<=10;i++) 
-{
-
-int intKelime = (char)rnd.Next('A','Z');
-char karakter = Convert.ToChar(intKelime);
-Console.Write(karakter);
-}
-*/
-//örnek dik üçgen
-
-//girilen sayıların en büyüğü ve en küçüğünü ekrana yazdırma
-int sayi;
-for  (int i =0 i<10;i++)
+// bir metnin içerisindeki rakamları temizleyen kod örneği yazınız
+// bu5g9ün i2tan6b2ul çok y4ğmu55r8l2u
