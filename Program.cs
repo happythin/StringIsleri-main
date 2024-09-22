@@ -1054,6 +1054,7 @@ for(int i=1;i<=4;i++)
     
 }
 */
+/*
 using System.Drawing;
 Console.BackgroundColor=ConsoleColor.DarkRed;
 Console.WriteLine("Değer giriniz.");
@@ -1071,4 +1072,46 @@ int deger=int.Parse(Console.ReadLine());
                 
         }
     Console.WriteLine();
+}
+*/
+
+/* string id ="wissen";
+string pass ="2409";
+string girilenId="";
+string girilenPass="";
+do
+{
+ Console.WriteLine("Lütfen kullanıcı adınızı giriniz");
+ girilenId=Console.ReadLine();
+Console.WriteLine("Lütfen şifrenizi giriniz");
+ girilenPass=Console.ReadLine();
+ if (girilenId==id && girilenPass==pass)
+    {
+        Console.WriteLine("Başarıyla giriş yaptınız.");
+        break;
+    }
+    else 
+    {
+        Console.WriteLine("Giriş başarısız. Lütfen tekrar deneyiniz.");
+    }
+} while (true);
+
+
+
+*/
+Console.WriteLine("Kaç adet fibonacci sayısı görmek istersiniz?");
+int deger = int.Parse(Console.ReadLine());
+ 
+int fibo1 = 1;
+int fibo2 = 1;
+ 
+Console.Write(fibo1 + " " + fibo2 + " ");
+ 
+for (int i = 3; i <= deger; i++)
+{
+    int fibo3 = fibo1 + fibo2;
+    Console.Write(fibo3 + " ");
+ 
+    fibo1 = fibo2;
+    fibo2 = fibo3;
 }
