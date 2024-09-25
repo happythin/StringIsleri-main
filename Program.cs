@@ -2137,3 +2137,88 @@ while (tahmin<=10)
     tahmin++;
 }
 */
+/*
+Console.WriteLine("Merhaba, lütfen kaç adet not gireceğinizi yazınız.");
+int notAdet=int.Parse(Console.ReadLine());
+int[] nots=new int[notAdet];
+for(int i=0;i<notAdet;i++)
+{
+    Console.WriteLine(" {0}. notunuzu giriniz",i+1);
+    nots[i]=int.Parse(Console.ReadLine());
+    
+    
+}
+for(int j=0;j<notAdet;j++)
+{
+    Console.WriteLine(nots[j]);
+}
+*/
+/*
+int[] nots=new int[10];
+Random rnd =new Random();
+for(int i=0;i<nots.Length;i++)
+{
+    nots[i]=rnd.Next(1,100);
+    Console.WriteLine(nots[i]);
+}
+for(int j=0;j<nots.Length;j++)
+{
+ Console.WriteLine(nots[j]);
+}
+*/
+/*
+string[] stringDizi=new string[10];
+
+Random rnd =new Random();
+
+for (int i=0;i<10;i++)
+{
+    string randomString="";
+    for(int j=0;j<=10;j++)
+    {
+        char random = (char)rnd.Next('A','Z');
+        randomString+=random.ToString();
+    }
+    stringDizi[i]+=randomString;
+    Console.WriteLine(stringDizi[i]);
+    
+}
+*/
+//SAYISAL LOTO OYUNU
+// kullanıcıdan 1-49 arası sayı alınır
+// 6 adet 1 ile 1-49 arası değer üretip diziye doldurulur
+// iki dizi birbiri ile karşılaştırılır
+// kaç adet doğru tahmin girildiği ekrana yazdırılır
+
+Console.WriteLine("Merhaba, lütfen 1 ile 49 arası sayı  tahmini giriniz.");
+int[] loto=new int[6];
+int[] tahmin=new int[6];
+for(int j=0;j<5;j++)
+{   
+    Random rnd =new Random();
+    for(int i=0;i<6;i++)
+    {
+        loto[i]=rnd.Next(1,49);
+    }
+}
+for(int i=0;i<6;i++)
+{
+    Console.WriteLine(loto[i]);
+    Console.WriteLine(" {0}. tahmini giriniz",i+1);
+    tahmin[i]=int.Parse(Console.ReadLine());
+}
+for (int i=0;i<6;i++)
+{
+    if(tahmin[i]==loto[i])
+    {
+        Console.WriteLine("Tebrikler!!!Kazandınız.");
+        break;
+    }
+    else
+    {
+        Console.WriteLine("!!KAYBETTİNİZ ŞANS OYUNU PİŞMANLIKTIR!!");
+        break;
+    }
+ 
+}
+
