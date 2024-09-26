@@ -2222,3 +2222,156 @@ for (int i=0;i<6;i++)
  
 }
 
+/*
+Console.WriteLine("Merhaba, lütfen kaç adet not gireceğinizi yazınız.");
+int notAdet=int.Parse(Console.ReadLine());
+int[] nots=new int[notAdet];
+for(int i=0;i<notAdet;i++)
+{
+    Console.WriteLine(" {0}. notunuzu giriniz",i+1);
+    nots[i]=int.Parse(Console.ReadLine());
+    
+    
+}
+for(int j=0;j<notAdet;j++)
+{
+    Console.WriteLine(nots[j]);
+}
+*/
+/*
+int[] nots=new int[10];
+Random rnd =new Random();
+for(int i=0;i<nots.Length;i++)
+{
+    nots[i]=rnd.Next(1,100);
+    Console.WriteLine(nots[i]);
+}
+for(int j=0;j<nots.Length;j++)
+{
+ Console.WriteLine(nots[j]);
+}
+*/
+/*
+string[] stringDizi=new string[10];
+
+Random rnd =new Random();
+
+for (int i=0;i<10;i++)
+{
+    string randomString="";
+    for(int j=0;j<=10;j++)
+    {
+        char random = (char)rnd.Next('A','Z');
+        randomString+=random.ToString();
+    }
+    stringDizi[i]+=randomString;
+    Console.WriteLine(stringDizi[i]);
+    
+}
+*/
+//SAYISAL LOTO OYUNU
+// kullanıcıdan 1-49 arası sayı alınır
+// 6 adet 1 ile 1-49 arası değer üretip diziye doldurulur
+// iki dizi birbiri ile karşılaştırılır
+// kaç adet doğru tahmin girildiği ekrana yazdırılır
+
+/* 
+Console.WriteLine("Merhaba, sayısal loto simülasyonuna hoşgeldiniz.");
+int[] loto=new int[6];
+int[] tahmin=new int[6];
+tahmin[1]=19;tahmin[2]=47;tahmin[3]=23;tahmin[4]=22;tahmin[5]=11;tahmin[0]=20;
+int haftaSayisi=0;
+
+for(int j=0;j<5;j++)
+{   
+    Random rnd =new Random();
+    for(int i=0;i<6;i++)
+    {
+        loto[i]=rnd.Next(1,49);
+    }
+}
+for(int j=0;j<100000;j++)
+{
+
+    for (int i=0;i<6;i++)
+{
+    if(tahmin[i]==loto[i])
+    {
+        Console.WriteLine("Tebrikler!!!Kazandınız.");
+        break;
+        haftaSayisi++;
+    }
+    else
+    {
+        Console.WriteLine("!!KAYBETTİNİZ ŞANS OYUNU PİŞMANLIKTIR!!");
+        haftaSayisi++;
+    }
+    
+}
+}
+Console.WriteLine("{0} TL harcadınız.",haftaSayisi*15);
+*/
+/*
+int tahminEdilenNo=0;
+int haftaSayisi=0;
+int[] random = new int[6];
+int[] tahmin = new int[6];
+tahmin[0]=20;tahmin[1]=19;tahmin[2]=47;tahmin[3]=23;tahmin[4]=22;tahmin[5]=11;
+Random rnd = new Random();
+for(int i = 0; i < 6;i++)
+{
+
+    random[i]=rnd.Next(1,49);
+}
+for(int k = 0;k<1000000;k++)
+{
+    for(int i = 0;i<random.Length;i++)
+    {
+
+    for(int j=0;j<random.Length;j++)
+    {
+
+        if(random[i]==tahmin[j])
+        {
+
+            tahminEdilenNo++;
+
+        }
+        if(tahminEdilenNo==5)
+        {
+            Console.WriteLine("{0} TL harcadınız.",haftaSayisi*15);
+            Console.WriteLine("Şanslı sayılar {0}{1}{2}{3}{4}{5}",random[0],random[1],random[2],random[3],random[4],random[5]);
+            break;
+        }
+        haftaSayisi++;
+    }
+
+    }
+}
+*/
+//ALINAN DİZİYİ TERS ÇEVİRİP EKRANA YAZDIRMAK
+/*
+Console.WriteLine("Merhaba, lütfen 10 adet sayı yazınız.");
+
+int[] sayi=new int[10];
+int[] terSayi=new int[sayi.Length];
+int sayac=0;
+for(int i=0;i<10;i++)
+{
+    Console.WriteLine(" {0}. sayıyı giriniz",i+1);
+    sayi[i]=int.Parse(Console.ReadLine());
+}
+ for(int j=9;j>=0;j--)
+    {
+        terSayi[sayac]=sayi[j];
+        sayac++;
+    }
+    for(int i=0;i<10;i++)
+    {
+    Console.WriteLine(terSayi[i]);
+    }
+*/
+//
+/*
+Array.Reverse
+*/
