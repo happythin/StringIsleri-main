@@ -3539,3 +3539,116 @@ for (int i=0; i<10;i++)
 {
     Console.WriteLine(tersDizi[i]);
 }
+// 5 adet not alınıp kullanıcıdan alınan veriye göre sıralaması yapılacak veya çıkış yapılacak.
+/*
+int[] nots=new int[5];
+for(int i=0;i<5;i++)
+{
+    Console.WriteLine(" {0}. notunuzu giriniz",i+1);
+    nots[i]=int.Parse(Console.ReadLine());
+    
+}
+Console.WriteLine("Notları sıralamak için 1, uygulamayı kapatmak için 3 yazınız.");
+int giris=int.Parse(Console.ReadLine());
+if (giris==1){
+    for(int j=0;j<5;j++)
+    {
+    Array.Sort(nots);
+
+    }
+}
+if (giris==2)
+{
+
+}
+else if (giris==3)
+{
+    Console.WriteLine("Uygulama kapatılıyor.");
+}
+*/
+/*
+String [] tersDizi=new String[10];
+string ters="";
+for (int i=0; i<10;i++)
+{
+    Console.WriteLine("Lütfen bir metin giriniz");
+    String metin=Console.ReadLine();
+  
+for (int j = metin.Length; j >0 ; j--)
+{
+    ters+=metin.Substring(j-1,1);
+    tersDizi[i]=ters;
+}
+
+}
+for (int i=0; i<10;i++)
+{
+    Console.WriteLine(tersDizi[i]);
+}
+*/
+/*
+using System.Collections;
+
+ArrayList notlar= new ArrayList();
+int toplam=0;
+
+
+for(int i=0;i<10;i++)
+{
+    Console.WriteLine("lÜTFEN {0}. NOTUNUZU GİRİNİZ",i+1);
+    notlar.Add(int.Parse(Console.ReadLine()));
+
+}
+for(int i=0;i<10;i++)
+{
+toplam+=(int)notlar[i];
+}
+Console.WriteLine("Notlarınızın toplamı :"+toplam);
+Console.WriteLine("Notlarınızın ortalaması: "+toplam/10);
+*/
+/*
+//TAHMİN OYUNU
+using System.Collections;
+using System.ComponentModel;
+
+int tahmin=0;
+Random rnd = new Random();
+int a = rnd.Next(1,100);
+ArrayList tahminler= new ArrayList();
+for(int i=0;i<10;i++)
+{
+Console.WriteLine("Tahmininizi giriniz");
+tahmin =int.Parse(Console.ReadLine());
+tahminler.Add(tahmin);
+if(i==9)
+{
+if(tahmin==0)
+{
+Console.WriteLine("Tebrikler!");
+    break;
+}
+else{
+    Console.WriteLine("Kaybettiniz doğru tahmin {0} olacaktı",a);
+    Console.WriteLine("Tahminleriniz: ");
+    for(int j=0;j<10;j++)
+    {
+        
+        Console.WriteLine(tahminler[j]);
+    }
+
+    break;
+}
+}
+if(tahmin<a)
+{
+Console.WriteLine("Yukarı");
+}
+else if(tahmin>a){
+    Console.WriteLine("AŞAĞI");
+}
+else{
+    Console.WriteLine("Tebrikler!");
+    break;
+}
+}
+*/
