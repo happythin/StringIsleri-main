@@ -3652,3 +3652,43 @@ else{
 }
 }
 */
+string id ="wissen";
+string pass ="2409";
+string girilenId="";
+string girilenPass="";
+do
+{
+ Console.WriteLine("Lütfen kullanıcı adınızı giriniz");
+ girilenId=Console.ReadLine();
+Console.WriteLine("Lütfen şifrenizi giriniz");
+ girilenPass=Console.ReadLine();
+ if (girilenId==id && girilenPass==pass)
+    {
+        Console.WriteLine("Başarıyla giriş yaptınız.");
+        break;
+    }
+    else 
+    {
+        Console.WriteLine("Giriş başarısız. Lütfen tekrar deneyiniz.");
+    }
+} while (true);
+string id ="wissen";
+string pass ="2409";
+string girilenId="";
+string girilenPass="";
+do
+{
+ Console.WriteLine("Lütfen kullanıcı adınızı giriniz");
+ girilenId=Console.ReadLine();
+Console.WriteLine("Lütfen şifrenizi giriniz");
+ girilenPass=Console.ReadLine();
+ if (girilenId==id && girilenPass==pass)
+    {
+        Console.WriteLine("Başarıyla giriş yaptınız.");
+        break;
+    }
+    else 
+    {
+        Console.WriteLine("Giriş başarısız. Lütfen tekrar deneyiniz.");
+    }
+} while (true);
