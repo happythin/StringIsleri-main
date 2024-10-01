@@ -4996,6 +4996,39 @@ for (int i = 0;i<51;i++)
     Console.WriteLine("----");
     
 }
+/*
+using System.Collections;
+Console.WriteLine("Lütfen girmekistediğiniz not adetini yazınız.");
+int notsayisi = int.Parse(Console.ReadLine());
+ArrayList nots = new ArrayList(notsayisi);
+int not=0;
+int a=1;
+int toplam =not;
+
+foreach (var item in nots)
+{
+    Console.WriteLine("Lütfen {0}. notunuzu girin.",a);
+    not+=int.Parse(Console.ReadLine());
+    a++;
+}
+Console.WriteLine("TOPLAM {0} ORTALAMA{1}",toplam,toplam/notsayisi);
+Random random= new Random();
+*/
+using System.Globalization;
+
+int[] sayi1 = new int[10]{1,2,3,4,5,6,7,8,9,10,};
+int[] sayi2 = new int[10]{1,2,3,4,5,6,7,8,9,10,};
+foreach (int i in sayi1)
+{
+    int a=0;
+   foreach (int j in sayi2)
+   {
+    
+   }
+   Console.WriteLine(i*);
+}
+
+
 
 
 
