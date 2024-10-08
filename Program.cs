@@ -5335,6 +5335,19 @@ int b = int.Parse(Console.ReadLine());
 buyukolan(a, b);
 */
 
+string metin="";
+int deger=1;
+static bool TryBarse(string? metin, out int deger)
+{
+    int harf=0;
+    for (int i=0; i<metin.Length;i++)
+    {
+        metin.Substring(i,metin.Length-1);
+        if (metin.)
+    }
+   
+}
+
 
 
 
