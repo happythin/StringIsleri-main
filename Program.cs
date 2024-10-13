@@ -5903,6 +5903,17 @@ foreach(DictionaryEntry item in cihazListesi){
    Console.WriteLine("Sıra No : {3} Ad : {0} Soyad :{1} Yaş : {2}",selectedProduct.name,selectedProduct.brand,selectedProduct.price,item.Key);
 }
 */
+Yamuk yamuk=new Yamuk();
+double yamukalan=yamuk.YamukAlan(9,15,8);
+double yamukcevre=yamuk.YamukCevre(9,15,8,3);
+Koni koni=new Koni();
+double konihacim=koni.KoniHacim(10,2);
+double konialan=koni.KoniAlan(11,5);
+Console.WriteLine("yamuk alanı "+yamukalan);
+Console.WriteLine("yamuk cevresi "+yamukcevre);
+Console.WriteLine("koni alanı "+konialan);
+Console.WriteLine("koni hacmi "+konihacim);
+
 
 
 
