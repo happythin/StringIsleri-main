@@ -5721,6 +5721,189 @@ foreach(DictionaryEntry item in ogrenciListesi){
 // Okey : yarın sınıf ve nesnelerden devam!!!
 
 
+// OOP :Nesne  OOP dünyadaki her şeye bir object olarak bakan bir bakış açısıdır.
+
+// OOP'nin en tepedeki tipi object tipidir.
+
+// Tüm her şey objectten türer
+
+// OOP şu başlıklardan oluşur : 
+// 1- Kalıtım : Inheritance  : Üst soydan özellik aktarımı
+// 2-Kapsüllemek : Encapsulation : Özelliklerin, kapsüllenerek dış dünyaya açılması
+// 3-Çok biçimlilik Polymorphism : Özelliklerin nasıl kullanılacağı(zorunlu ? 
+//opsiyonel ? zorunlu ise davranışı değiştirebilir miyiz ?)
+
+
+// OOP'nin ilk konusu nesne oluşturma ile başlayalım
+
+
+// Ogrenci.cs isimli dosyada bir ogrenci isimli class (sınıf) yazdık.
+// Program.cs dosyasında Ogrenci sınıfından nesneler oluşturacağız
+
+// Sınıf ve Nesne Kavramı : 
+
+// Sınıf : Nesne içerisinde olması gerken özelliklerin tanımlı olduğu şablondur
+
+// Sınıf : Mimarin çizimidir. Yani özellikerin durmuş olduğu şablondur
+
+// Nesne : Sınıf içerisinde duran şablondan üretilmiş öğelerdir
+
+// Ogrenci sinifindan bir kaç nesne üretelim
+
+// nesne örneği almak : 
+
+
+// aşağıdaki kod örneği iki parçadan oluşuyor
+
+// bu kısım stack bölgesinde, bir pointer oluşturur
+//Ogrenci o1
+
+
+// bu kısım ise, stack bölgesindeki pointer'in işaret ettiği heap bölgesindeki alanda bir
+// bellek register eder.(Aynı zamanda, bu nesnesin taşımış olduğu değişkenlerin
+// başlangıç değerlerini belleye yazar)
+//new Ogrenci();
+
+
+/*
+Ogrenci ogrenci1 = new Ogrenci();
+
+// değer verelim 
+ogrenci1.name="Oğuzhan";
+ogrenci1.lastname="Ayaz";
+ogrenci1.age=12;
+
+// o1 adında nesnemiz hazır : Ekrana yazdıralım
+
+Console.WriteLine("Ad : {0}",ogrenci1.name);
+Console.WriteLine("Soyad : {0}",ogrenci1.lastname);
+Console.WriteLine("Yaş : {0}",ogrenci1.age);
+
+*/
+
+// 4 adet öğrenci nesnesi üretip, bir dizi içerisine yerleştirelim
+
+using System.Collections;
+using Microsoft.VisualBasic;
+
+Product product1 = new Product();
+product1.name = "Iphone 16 Pro Max";
+product1.brand = "Apple";
+product1.capacity = "256 GB";
+product1.price = 120000;
+product1.color = "Dessert";
+
+Product product2 = new Product();
+product2.name = "Glaxy S24 Ultra";
+product2.brand = "Samsung";
+product2.capacity = "512 GB";
+product2.price = 90000;
+product2.color = "Gray";
+
+
+Product product3 = new Product();
+product3.name = "13 Ultra";
+product3.brand = "Xiaomi";
+product3.capacity = "512 GB";
+product3.price = 70000;
+product3.color = "White";
+
+
+
+Product product5 = new Product();
+product5.name = "Redmi Note 8 Pro";
+product5.brand = "Xiaomi";
+product5.capacity = "64 GB";
+product5.price = 20000;
+product5.color = "Blue";
+
+
+// Bu 4 öğrenci nesnesini bir dizi içerisinde yerleştirelim
+
+Product[] Products = new Product[5];
+
+
+// Ogrenci dizisi içerisinde Ogrenci nesnelerini yerleştirelim 
+Products[0] = product1;
+Products[1] = product2;
+Products[2] = product3;
+//Farklı tanımlama yöntemi
+Products[3] = new Product()
+{
+ name= "P60 Pro",
+brand = "Huawei",
+capacity = "128 GB",
+price = 80000,
+color = "Silver",
+};
+Products[4] = new Product()
+{
+    name = "Redmi Note 8 Pro",
+brand = "Xiaomi",
+capacity = "64 GB",
+price = 20000,
+color = "Blue",
+
+};
+
+// Ogrenciler  adındaki, Ogrenci tipindeki dizi, içerisine sadece öğrenci nesneleri alır
+
+// Örnek : öğrenci tipindeki bir diziye bir int değer atamaya çalışalım 
+// Cevap : Ogrenci tipinden bir dizi içerisine başka tipte bir dğer veremezsiniz
+
+// Ögrenci dizisini ekrana yazdıralım 
+// 1 : Foreach ile yazdıralım
+foreach (Product pro in Products)
+{
+
+    Console.WriteLine("Marka : {0} Model : {1} - Fiyat : {2} Kapasite : {3} Renk : {4}", pro.brand, pro.name, pro.price, pro.capacity, pro.color);
+}
+
+
+// 2 : For ile yazdıralım
+
+
+
+// 2 : For ile yazdıralım
+/*
+for(int i =0;i<Products.Length;i++){
+
+    // Çözüm 1 : 
+    //Console.WriteLine("Ad : {0} Soyad : {1} Yaş :{2}",ogrenciler[i].name,ogrenciler[i].lastname,ogrenciler[i].age);
+
+    // Çözüm 2
+    // Çözüm 2 performans olarak bir önceki yönteme göre daha mantıklı kalacaktır.
+    Product gecicipro = Products[i];
+    Console.WriteLine("Ad : {0} Soyad : {1} Yaş :{2}",gecicipro.brand,gecicipro.name,gecicipro.price);
+
+    
+}
+*/
+
+
+
+// Yukarıdaki ogrenci isimli nesneleri, SortedList koleksiyonu içerisine yerleştirip, sonrasında 
+// foreach ile ekrana yazdırınız
+
+/*
+SortedList cihazListesi = new SortedList();
+cihazListesi.Add(1,product1);
+cihazListesi.Add(2,product1);
+cihazListesi.Add(3,product1);
+cihazListesi.Add(4,product1);
+*/
+// Ogrenci nesneleri sortedlist içerisine eklendiler.
+
+// Ekrana yazdırmak
+/*
+foreach(DictionaryEntry item in cihazListesi){
+
+    // Ogrenci nesneleri, item.value diye erişilir
+   Product selectedProduct =  ((Product)item.Value);
+   Console.WriteLine("Sıra No : {3} Ad : {0} Soyad :{1} Yaş : {2}",selectedProduct.name,selectedProduct.brand,selectedProduct.price,item.Key);
+}
+*/
+
 
 
 
