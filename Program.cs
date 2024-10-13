@@ -5914,6 +5914,14 @@ Console.WriteLine("yamuk cevresi "+yamukcevre);
 Console.WriteLine("koni alanı "+konialan);
 Console.WriteLine("koni hacmi "+konihacim);
 
+Personel p = new Personel();
+Console.WriteLine(p.Ad);
+Console.WriteLine(p.Soyad);
+Console.WriteLine(p.Yas);
+Personel p1 = new Personel("Yaşar","Kemal",80);
+Console.WriteLine(p1.Ad);
+Console.WriteLine(p1.Soyad);
+Console.WriteLine(p1.Yas);
 
 
 

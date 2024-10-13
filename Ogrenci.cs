@@ -112,4 +112,27 @@ public class Koni
 
 
 }
+public class Personel
+{
+public string Ad;
+public string Soyad;
+public int Yas;
+
+public Personel()
+{
+Ad="Muhittin";
+Soyad="Kıllıbacak";
+Yas=70;
+
+}
+public Personel(string ad,string soyad,int yas)
+{
+    Ad=ad;
+    Soyad=soyad;
+    Yas=yas;
+}
+
+
+
+}
 
